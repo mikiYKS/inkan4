@@ -44,7 +44,7 @@ function getKakuin() {
                   fileName = '未保存';
                   inkanName = "角印";
                 } else {
-                  fileName = fileUrl;
+                  fileName = fileUrl.match(".+/(.+?)([\?#;].*)?$")[1];
                   inkanName = "角印";
                 };
                 inkanLog(inkanName, fileName);
