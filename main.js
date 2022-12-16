@@ -39,14 +39,18 @@ function getKakuin() {
             inkanpaste(kakuinbase64);
 
             //ログ出力
-            Word.run(async (context) => {
-              context.document.load("name");
-              await context.sync();
-              const fileName = context.document.name;
-              const inkanName = "角印";
-              inkanLog(inkanName, fileName);
+            Office.context.document.getFilePropertiesAsync(async function (asyncResult) {
+              var fileUrl = asyncResult.value.url;
+              if (fileUrl == "") {
+                const fileName = '未保存'
+                const inkanName = "角印";
+                inkanLog(inkanName, fileName);
+              } else {
+                const fileName = fileUrl;
+                const inkanName = "角印";
+                inkanLog(inkanName, fileName);
+              }
             });
-
           },
           function (data) {
             console.log(data);
