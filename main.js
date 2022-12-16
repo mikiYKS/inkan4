@@ -39,6 +39,7 @@ function getKakuin() {
             inkanpaste(kakuinbase64);
 
             //ログ出力
+           function getFileUrl() {
             Office.context.document.getFilePropertiesAsync(async function (asyncResult) {
               var fileUrl = asyncResult.value.url;
               if (fileUrl == "") {
@@ -51,6 +52,7 @@ function getKakuin() {
                 inkanLog(inkanName, fileName);
               }
             });
+           };
           },
           function (data) {
             console.log(data);
