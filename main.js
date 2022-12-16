@@ -41,7 +41,7 @@ function getKakuin() {
                 var fileName;
                 var inkanName;
                 if (fileUrl == "") {
-                  fileName = '未保存';
+                  fileName = '未保存ワード';
                   inkanName = "角印";
                 } else {
                   fileName = fileUrl.match(".+/(.+?)([\?#;].*)?$")[1];
