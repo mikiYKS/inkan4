@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function getKakuin() {
   var authenticator;
-  var client_id = "62eefb0c-1035-4f17-bcc3-715710cbd83d";
+  var client_id = "2b588edd-4adc-4e4f-a3e6-a8d362246a29";
   var redirect_url = "https://mikiyks.github.io/inkan4/";
   var scope = "https://graph.microsoft.com/Sites.Read.All";
   var access_token;
