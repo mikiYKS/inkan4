@@ -8,15 +8,12 @@ function getKakuin() {
   var redirect_url = "https://mikiyks.github.io/inkan4/";
   var scope = "https://graph.microsoft.com/Files.Read.All";
   var access_token;
-
   authenticator = new OfficeHelpers.Authenticator();
-
   //access_token取得
   authenticator.endpoints.registerMicrosoftAuth(client_id, {
     redirectUrl: redirect_url,
     scope: scope
   });
-
   authenticator
     .authenticate(OfficeHelpers.DefaultEndpoints.Microsoft)
     .then(function (token) {
@@ -37,7 +34,6 @@ function getKakuin() {
 
             //ここからkakuinbase64を張り付ける処理
             inkanpaste(kakuinbase64);
-
             //ログ出力
             $(function () {
               Office.context.document.getFilePropertiesAsync(async function (asyncResult) {
@@ -54,7 +50,6 @@ function getKakuin() {
                 inkanLog(inkanName, fileName);
               });
             });
-
           },
           function (data) {
             console.log(data);
@@ -102,18 +97,14 @@ function inkanLog(inkanName, inkanFile) {
   var redirect_url = "https://mikiyks.github.io/inkan4/";
   var scope = "https://graph.microsoft.com/Sites.ReadWrite.All";
   var access_token;
-
   authenticator = new OfficeHelpers.Authenticator();
-
   //access_token取得
   authenticator.endpoints.registerMicrosoftAuth(client_id, {
     redirectUrl: redirect_url,
     scope: scope
   });
-
   authenticator.authenticate(OfficeHelpers.DefaultEndpoints.Microsoft).then(function (token) {
     access_token = token.access_token;
-
     $(function () {
       $.ajax({
         url:
