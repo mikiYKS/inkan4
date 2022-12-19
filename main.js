@@ -86,7 +86,7 @@ Office.initialize = function (reason) {
 
 async function inkanpaste(pic) {
   await Word.run(async (context) => {
-    context.document.getSelection().insertInlinePictureFromBase64(pic, "End").height = 83.1;
+    context.document.getSelection().insertInlinePictureFromBase64(pic, "End").height = 82.6;
     await context.sync();
   });
 }
