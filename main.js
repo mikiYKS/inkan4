@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function getKakuin() {
   var authenticator;
-  var client_id = "75346507-4b21-4a3a-be5f-47b2adc216a2";
+  var client_id = "f791d47e-5341-42e0-9b48-33955348b62a";
   var redirect_url = "https://mikiyks.github.io/inkan4/";
   var scope = "https://graph.microsoft.com/Files.Read.All";
   var access_token;
@@ -93,7 +93,7 @@ async function inkanpaste(pic) {
 //SharePointListにログ出力
 function inkanLog(inkanName, inkanFile) {
   var authenticator;
-  var client_id = "75346507-4b21-4a3a-be5f-47b2adc216a2";
+  var client_id = "f791d47e-5341-42e0-9b48-33955348b62a";
   var redirect_url = "https://mikiyks.github.io/inkan4/";
   var scope = "https://graph.microsoft.com/Sites.ReadWrite.All";
   var access_token;
